@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLARE</title>
+    <style>
+            /* Resetando margens e preenchimentos */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Estilo da página */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    
+    /* Barra de navegação */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 10px 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #007bff;
+    }
+    
+    .navbar nav ul {
+        list-style: none;
+        display: flex;
+    }
+    
+    .navbar nav ul li {
+        margin-right: 20px;
+    }
+    
+    .navbar nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+    }
+    
+    .navbar nav ul li a:hover {
+        color: #007bff;
+    }
+    
+    /* Botão Sair */
+    .logout {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    
+    .logout:hover {
+        background-color: #0056b3;
+    }
+    
+    /* Seção de boas-vindas */
+    .welcome {
+        text-align: center;
+        margin-top: 100px;
+    }
+    
+    .welcome h1 {
+        font-size: 36px;
+        color: #333;
+    }
+    
+    .welcome p {
+        font-size: 18px;
+        color: #555;
+        margin: 20px 0;
+    }
+    
+    .contact-button {
+        padding: 15px 25px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+    
+    .contact-button:hover {
+        background-color: #0056b3;
+    }
+    </style>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Solare</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/ListaFornecedores.html">Fornecedores</a></li>
+                    <li><a href="/ListaProdutos.html">Produtos</a></li>
+                    <li><a href="/SimularProjeto.html">Simulação</a></li>
+                    <li><a href="/ListaContatos.html">Contatos</a></li>
+                    <li><a href="#">Clientes</a></li>
+                </ul>
+            </nav>
+            <button class="logout">Sair</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h1>Bem-vindos à SOLAR-E</h1>
+            <p>A melhor plataforma para quem quer contribuir com a sustentabilidade.</p>
+            <a href="#" class="contact-button">Entre em contato conosco</a>
+        </section>
+    </main>
+</body>
+</html>

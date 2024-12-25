@@ -1,0 +1,142 @@
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        header nav ul li a:hover {
+            color: #007bff;
+        }
+
+        header .logout {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        header .logout:hover {
+            background-color: #0056b3;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form label {
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="number"],
+        form input[type="checkbox"],
+        form input[type="radio"],
+        form button {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        form input[type="text"],
+        form input[type="number"] {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        form .radio-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        form .form-section {
+            margin-bottom: 20px;
+        }
+
+        form .form-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        form button {
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        form .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+
+        form .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        form .btn-secondary {
+            background-color: #17a2b8;
+            color: white;
+        }
+
+        form .btn-secondary:hover {
+            background-color: #117a8b;
+        }

@@ -1,0 +1,35 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: SOLAR-e
+authors:
+  - family-names: Marques Correa
+    given-names: Thyago
+  - family-names: Fernandes de Oliveira
+    given-names: Matheus
+  - family-names: Andrade Viana
+    given-names: Gustavo
+  - family-names: Cardoso dos Santos
+    given-names: Gabriel
+  - family-names: Natan Oliveira Moroni
+    given-names: Nayarisson 
+  - family-names: Vieira Paz de Bessa
+    given-names: Enrico
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: de Macêdo Neto
+    given-names: Cristiano
+  - name-suffix: Professora
+    affiliation: PUC Minas
+    family-names: Norberta de Brito
+    given-names: Aline 
+  - name-suffix: Professora
+    affiliation: PUC Minas
+    family-names: Marcia Gomes Amaral
+    given-names: Cleia
+keywords:
+  - dimensionamento
+  - fotovoltaico
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-2-ti2-1381100-solar-e.git
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2024-12-10

@@ -1,0 +1,17 @@
+body {
+    background-color: #f4f4f4;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.lead {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}

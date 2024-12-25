@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Produto - Solare</title>
+    <style>
+                /* Resetando margens e preenchimentos */
+                * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Barra de navegação */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .navbar nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar nav ul li {
+            margin-right: 20px;
+        }
+
+        .navbar nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .navbar nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Botão Sair */
+        .logout {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .logout:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilo do formulário */
+        .form-container {
+            max-width: 600px;
+            background: #fff;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="number"],
+        .form-container textarea,
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-container input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .form-container .form-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-container .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .form-container .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .form-container .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .form-container .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Solare</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ListaFornecedores.html">Fornecedores</a></li>
+                    <li><a href="ListaProdutos.html">Produtos</a></li>
+                    <li><a href="SimularProjeto.html">Simulação</a></li>
+                    <li><a href="ListaContatos.html">Contatos</a></li>
+                    <li><a href="#">Clientes</a></li>
+                </ul>
+            </nav>
+            <button class="logout">Sair</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h1>Novo Produto</h1>
+            <form>
+                <label for="fornecedor">Fornecedor</label>
+                <input type="text" id="fornecedor" name="fornecedor" placeholder="Digite o fornecedor">
+
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o nome do produto">
+
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" name="descricao" rows="4" placeholder="Digite a descrição do produto"></textarea>
+
+                <label for="valor">Valor</label>
+                <input type="number" id="valor" name="valor" min="0" step="0.01">
+
+                <label>Tipo</label>
+                <input type="radio" id="estrutura" name="tipo" value="Estrutura" checked>
+                <label for="estrutura">Estrutura</label>
+                <input type="radio" id="inversor" name="tipo" value="Inversor">
+                <label for="inversor">Inversor</label>
+                <input type="radio" id="modulo" name="tipo" value="Modulo Fotovoltaico">
+                <label for="modulo">Módulo Fotovoltaico</label>
+
+                <label for="dimensao">Dimensão do Produto</label>
+                <input type="number" id="dimensao" name="dimensao" min="0" step="1">
+
+                <label for="ativo">
+                    <input type="checkbox" id="ativo" name="ativo">
+                    Ativo?
+                </label>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Cadastrar</button>
+                    <button type="button" class="btn-secondary" onclick="window.history.back();">Voltar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

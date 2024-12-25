@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Exclusão</title>
+    <link rel="stylesheet" href="../assets/css/ExclusaoUsuario.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Exclusão do Usuário</h2>
+        <div class="info">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" value="Cliente Solare" readonly>
+            <label for="email">Email:</label>
+            <input type="text" id="email" value="usuario@gmail.com" readonly>
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" value="123.456.789-00" readonly>
+        </div>
+        <div class="logo">
+            <img src="../assets/img/LogoFundoPreto.png" class="logo" alt="Logo Solar-E">
+        </div>
+        <div class="buttons">
+            <button onclick="voltar()">Voltar</button>
+            <button onclick="confirmar()">Confirmar Exclusão</button>
+        </div>
+    </div>
+
+    <script>
+        function voltar() {
+            alert("Você clicou em Voltar.");
+        }
+
+        function confirmar() {
+            alert("Exclusão confirmada.");
+        }
+    </script>
+
+</body>
+</html>
+
+

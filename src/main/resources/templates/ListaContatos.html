@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Contatos - SOLARE</title>
+    <link rel="stylesheet" href="../static/assets/css/ListaContatos.css">
+    <style>
+            /* Resetando margens e preenchimentos */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Estilo da página */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    
+    /* Barra de navegação */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 10px 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #007bff;
+    }
+    
+    .navbar nav ul {
+        list-style: none;
+        display: flex;
+    }
+    
+    .navbar nav ul li {
+        margin-right: 20px;
+    }
+    
+    .navbar nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+    }
+    
+    .navbar nav ul li a:hover {
+        color: #007bff;
+    }
+    
+    .logout {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    
+    .logout:hover {
+        background-color: #0056b3;
+    }
+    
+    /* Seção de lista de contatos */
+    .contact-list {
+        max-width: 800px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-list h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    table th, table td {
+        text-align: left;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    table tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+    
+    .details-button {
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+    
+    .details-button:hover {
+        background-color: #0056b3;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Solare</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ListaFornecedores.html">Fornecedores</a></li>
+                    <li><a href="ListaProdutos.html">Produtos</a></li>
+                    <li><a href="SimularProjeto.html">Simulação</a></li>
+                    <li><a href="ListaContatos.html">Contatos</a></li>
+                    <li><a href="#">Clientes</a></li>
+                </ul>
+            </nav>
+            <button class="logout">Sair</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-list">
+            <h1>Lista de Contatos</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome:</th>
+                        <th>Telefone:</th>
+                        <th>Tipo de Contato:</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Matheus Fernandes</td>
+                        <td>31982623124</td>
+                        <td>Fornecedor</td>
+                        <td><button class="details-button">Detalhes</button></td>
+                    </tr>
+                    <tr>
+                        <td>Matheus Fernandes</td>
+                        <td>31982623124</td>
+                        <td>Fornecedor</td>
+                        <td><button class="details-button">Detalhes</button></td>
+                    </tr>
+                    <tr>
+                        <td>Matheus Fernandes</td>
+                        <td>31982623124</td>
+                        <td>Fornecedor</td>
+                        <td><button class="details-button">Detalhes</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="lista-contatos.js"></script>
+</body>
+</html>

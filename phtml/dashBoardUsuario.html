@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de Dashboard Solar-E">
+    <link rel="shortcut icon" href="../assets/icons/LogoFundoPreto.png" type="image/x-icon">
+    <title>Solar-E - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/DashBordCliente.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="Projeto">
+                <h2>Meus Projetos</h2>
+                <ul class="ListaProjetos">
+                </ul>
+            </div>
+        </div>
+
+        <div class="bar">
+            <div class="imgusu">
+                <img src="../assets/img/download.jpg" alt="Foto do usuário">
+            </div>
+            <div>
+                <h3>Nome do Usuário</h3>
+            </div>
+            <div>
+                <button class="btneditar">Editar Perfil</button>
+            </div>
+            <button class="btncreate" data-bs-toggle="modal" data-bs-target="#addProjectModal">Adicionar Novo Projeto</button>
+            <div>
+                <button class="btnlogoff" onclick="logoff()">Logoff</button>
+            </div>
+        </div>
+
+        <div class="modal fade" id="addProjectModal" tabindex="-1" aria-labelledby="addProjectModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addProjectModalLabel">Adicionar Novo Projeto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="add-project-form" onsubmit="addProject(event)">
+                            <div class="mb-3">
+                                <label for="project-name" class="form-label">Nome do Projeto</label>
+                                <input type="text" class="form-control" id="project-name" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Adicionar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function addProject(event) {
+            event.preventDefault();
+
+            const lista = document.querySelector('.ListaProjetos');
+            const projectName = document.getElementById('project-name').value;
+
+            const novoProjeto = document.createElement('li');
+            novoProjeto.classList.add('Unidade');
+
+            const nomeDiv = document.createElement('div');
+            nomeDiv.classList.add('nomeprojeto');
+            nomeDiv.textContent = projectName;
+
+            const botoesDiv = document.createElement('div');
+            botoesDiv.classList.add('botoes-projeto');
+
+            const editarLink = document.createElement('a');
+            editarLink.href = '#';
+            editarLink.classList.add('editar');
+            editarLink.textContent = 'Editar';
+
+            const botaoExcluir = document.createElement('button');
+            botaoExcluir.classList.add('remove');
+            botaoExcluir.textContent = 'Excluir';
+            botaoExcluir.onclick = function () {
+                lista.removeChild(novoProjeto);
+            };
+
+            botoesDiv.appendChild(editarLink);
+            botoesDiv.appendChild(botaoExcluir);
+
+            novoProjeto.appendChild(nomeDiv);
+            novoProjeto.appendChild(botoesDiv);
+
+            lista.appendChild(novoProjeto);
+            document.getElementById('add-project-form').reset();
+            const modal = bootstrap.Modal.getInstance(document.getElementById('addProjectModal'));
+            modal.hide();
+        }
+
+        function logoff() {
+            alert("Logoff realizado com sucesso!");
+        }
+    </script>
+</body>
+
+</html>

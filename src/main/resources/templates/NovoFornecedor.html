@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Fornecedor - Solare</title>
+    <style>
+                /* Reset */
+                * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        header nav ul li a:hover {
+            color: #007bff;
+        }
+
+        header .logout {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        header .logout:hover {
+            background-color: #0056b3;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form label {
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="number"],
+        form input[type="checkbox"],
+        form input[type="radio"],
+        form button {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        form input[type="text"],
+        form input[type="number"] {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        form .radio-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        form .form-section {
+            margin-bottom: 20px;
+        }
+
+        form .form-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        form button {
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        form .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+
+        form .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        form .btn-secondary {
+            background-color: #17a2b8;
+            color: white;
+        }
+
+        form .btn-secondary:hover {
+            background-color: #117a8b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Solare</div>
+        <nav>
+            <ul>
+                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ListaFornecedores.html">Fornecedores</a></li>
+                <li><a href="ListaProdutos.html">Produtos</a></li>
+                <li><a href="SimularProjeto.html">Simulação</a></li>
+                <li><a href="ListaContatos.html">Contatos</a></li>
+                <li><a href="#">Clientes</a></li>
+            </ul>
+        </nav>
+        <button class="logout">Sair</button>
+    </header>
+
+    <main>
+        <h1>Novo Fornecedor</h1>
+        <form>
+            <div class="form-section">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome">
+            </div>
+
+            <div class="form-section">
+                <label for="documento">Documento</label>
+                <input type="text" id="documento" name="documento">
+            </div>
+
+            <div class="form-section">
+                <label>Tipo</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="tipo" value="Pessoa Física" checked> Pessoa Física</label>
+                    <label><input type="radio" name="tipo" value="Pessoa Jurídica"> Pessoa Jurídica</label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <label><input type="checkbox" name="ativo"> Ativo?</label>
+            </div>
+
+            <h3>Endereço</h3>
+
+            <div class="form-section">
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" name="cep">
+            </div>
+
+            <div class="form-section">
+                <label for="logradouro">Logradouro</label>
+                <input type="text" id="logradouro" name="logradouro">
+            </div>
+
+            <div class="form-section">
+                <label for="numero">Número</label>
+                <input type="text" id="numero" name="numero">
+            </div>
+
+            <div class="form-section">
+                <label for="complemento">Complemento</label>
+                <input type="text" id="complemento" name="complemento">
+            </div>
+
+            <div class="form-section">
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" name="bairro">
+            </div>
+
+            <div class="form-section">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" name="cidade">
+            </div>
+
+            <div class="form-section">
+                <label for="estado">Estado</label>
+                <input type="text" id="estado" name="estado">
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" class="btn-primary">Cadastrar</button>
+                <button type="button" class="btn-secondary">Voltar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

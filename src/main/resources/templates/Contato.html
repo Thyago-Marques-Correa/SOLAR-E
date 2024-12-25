@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - SOLARE</title>
+    <style>
+              /* Resetando margens e preenchimentos */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Estilo da página */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    
+    /* Barra de navegação */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 10px 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #007bff;
+    }
+    
+    .navbar nav ul {
+        list-style: none;
+        display: flex;
+    }
+    
+    .navbar nav ul li {
+        margin-right: 20px;
+    }
+    
+    .navbar nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+    }
+    
+    .navbar nav ul li a:hover {
+        color: #007bff;
+    }
+    
+    .logout {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    
+    .logout:hover {
+        background-color: #0056b3;
+    }
+    
+    /* Formulário de contato */
+    .contact-form {
+        max-width: 600px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-form h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .radio-group input {
+        margin-right: 10px;
+    }
+    
+    .submit-button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .submit-button:hover {
+        background-color: #0056b3;
+    }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Solare</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ListaFornecedores.html">Fornecedores</a></li>
+                    <li><a href="ListaProdutos.html">Produtos</a></li>
+                    <li><a href="SimularProjeto.html">Simulação</a></li>
+                    <li><a href="ListaContatos.html">Contatos</a></li>
+                    <li><a href="#">Clientes</a></li>
+                </ul>
+            </nav>
+            <button class="logout">Sair</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-form">
+            <h1>Entre em contato!</h1>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Tipo de Contato:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="simulacao" name="tipo_contato" value="simulacao" required>
+                        <label for="simulacao">Quero fazer a simulação.</label>
+                        <br>
+                        <input type="radio" id="vender" name="tipo_contato" value="vender">
+                        <label for="vender">Quero vender meus produtos.</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem (Opcional):</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="contato.js"></script>
+</body>
+</html>

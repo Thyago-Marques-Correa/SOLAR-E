@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Contato - SOLARE</title>
+    <style>
+                /* Resetando margens e preenchimentos */
+                * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Estilo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        /* Barra de navegação */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+        .navbar nav ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        .navbar nav ul li {
+            margin-right: 20px;
+        }
+        
+        .navbar nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .navbar nav ul li a:hover {
+            color: #007bff;
+        }
+        
+        .logout {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .logout:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Seção de detalhes */
+        .contact-details {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .contact-details h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .contact-details h3 {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .details p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .back-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Solare</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ListaFornecedores.html">Fornecedores</a></li>
+                    <li><a href="ListaProdutos.html">Produtos</a></li>
+                    <li><a href="SimularProjeto.html">Simulação</a></li>
+                    <li><a href="ListaContatos.html">Contatos</a></li>
+                    <li><a href="#">Clientes</a></li>
+                </ul>
+            </nav>
+            <button class="logout">Sair</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-details">
+            <h1>Detalhes</h1>
+            <h3>Informação somente leitura</h3>
+            <div class="details">
+                <p><strong>Nome:</strong> Matheus Fernandes</p>
+                <p><strong>Telefone:</strong> 31982623124</p>
+                <p><strong>E-mail:</strong> matheus.fernandes.0063@gmail.com</p>
+                <p><strong>Mensagem (Opcional):</strong> sdgsdgsdg</p>
+            </div>
+            <button class="back-button" onclick="voltar()">Voltar</button>
+        </section>
+    </main>
+
+    <script>
+        function voltar() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

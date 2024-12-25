@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Simulação</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style> body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        color: #343a40;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .navbar {
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar-brand {
+        color: #007bff;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .navbar-nav .nav-link {
+        color: #343a40;
+        font-weight: 500;
+    }
+    
+    .navbar-nav .nav-link:hover {
+        color: #007bff;
+    }
+    
+    .btn-logout {
+        color: #ffffff;
+        background-color: #007bff;
+        border: none;
+    }
+    
+    .btn-logout:hover {
+        background-color: #0056b3;
+    }
+    
+    .hero {
+        text-align: center;
+        padding: 60px 20px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #343a40;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+        color: #6c757d;
+        margin-bottom: 20px;
+    }
+    
+    .btn-primary {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    
+    .table-container {
+        padding: 20px;
+    }
+    
+    .table thead {
+        background-color: #007bff;
+        color: #ffffff;
+    }
+    
+    .table-hover tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+    
+    .text-center {
+        color: #6c757d;
+        font-size: 1.1rem;
+    }</style>
+</head>
+
+<body>
+    <h3 style="padding-top: 50px">Nova Simulação</h3>
+    <hr />
+    <div class="row">
+        <div class="col-md-10">
+            <form enctype="multipart/form-data" action="/Simulacao/Create" method="post">
+
+                <div class="form-group mb-1">
+                    <label for="ClienteId" class="control-label">Cliente</label>
+                    <select id="ClienteId" name="ClienteId" class="form-control">
+                        <option value="">Selecione um cliente</option>
+                        <!-- Substituir com os valores reais -->
+                        <option value="1">Cliente 1</option>
+                        <option value="2">Cliente 2</option>
+                    </select>
+                    <span class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-1">
+                    <label for="Nome" class="control-label">Nome</label>
+                    <input id="Nome" name="Nome" class="form-control" />
+                    <span class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-1">
+                    <label for="TipoImovel" class="control-label">Tipo de Imóvel</label><br />
+                    <input type="radio" name="TipoProduto" value="1" id="tipo1" checked /> Casa <br />
+                    <input type="radio" name="TipoProduto" value="2" id="tipo2" /> Apartamento
+                </div>
+
+                <div class="form-group mb-1">
+                    <label for="OrcamentoMaximo" class="control-label">Orçamento Máximo</label>
+                    <input id="OrcamentoMaximo" name="OrcamentoMaximo" class="form-control" />
+                    <span class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-1">
+                    <label for="ConsumoMedioMensal" class="control-label">Consumo Médio Mensal</label>
+                    <input id="ConsumoMedioMensal" name="ConsumoMedioMensal" class="form-control" />
+                    <span class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-1">
+                    <label for="ValorMedioContaEnergia" class="control-label">Valor Médio da Conta de Energia</label>
+                    <input id="ValorMedioContaEnergia" name="ValorMedioContaEnergia" class="form-control" />
+                    <span class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-1">
+                    <label for="AnosPermanencia" class="control-label">Anos de Permanência</label>
+                    <input id="AnosPermanencia" name="AnosPermanencia" class="form-control" />
+                    <span class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-1">
+                    <label for="EspacoTotalInstalacao" class="control-label">Espaço Total para Instalação</label>
+                    <input id="EspacoTotalInstalacao" name="EspacoTotalInstalacao" class="form-control" />
+                    <span class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-1">
+                    <input type="submit" value="Cadastrar" class="btn btn-primary" />
+                    <a class="btn btn-info" href="SimularProjeto.html">Voltar</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelector('form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const data = {
+            clienteId: document.getElementById('ClienteId').value,
+            nome: document.getElementById('Nome').value,
+            tipoProduto: document.querySelector('input[name="TipoProduto"]:checked').value,
+            orcamentoMaximo: document.getElementById('OrcamentoMaximo').value,
+            consumoMedioMensal: document.getElementById('ConsumoMedioMensal').value,
+            valorMedioContaEnergia: document.getElementById('ValorMedioContaEnergia').value,
+            anosPermanencia: document.getElementById('AnosPermanencia').value,
+            espacoTotalInstalacao: document.getElementById('EspacoTotalInstalacao').value
+        };
+
+        fetch('/Simulacao/Create', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => {
+                if (response.ok) {
+                    alert('Simulação cadastrada com sucesso!');
+                    window.location.href = '/SimularProjeto.html';
+                } else {
+                    response.text().then(error => alert('Erro: ' + error));
+                }
+            })
+            .catch(err => console.error('Erro ao cadastrar simulação:', err));
+    });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Fornecedores - Solare</title>
+    <link rel="stylesheet" href="../static/assets/css/ListaFornecedores.css">
+    <style>
+                /* Resetando estilos padrão */
+                * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Cabeçalho */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        header .logo a {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        header nav a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        header nav a:hover {
+            color: #007bff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .btn-novo {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn-novo:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos da tabela */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Botões de ação */
+        .btn {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-detalhes {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .btn-detalhes:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-editar {
+            background-color: #ffc107;
+            color: #fff;
+        }
+
+        .btn-editar:hover {
+            background-color: #e0a800;
+        }
+
+        .btn-excluir {
+            background-color: #dc3545;
+            color: #fff;
+        }
+
+        .btn-excluir:hover {
+            background-color: #c82333;
+        }
+
+        /* Checkbox */
+        input[type="checkbox"] {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="#">Solare</a>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="ListaFornecedores.html">Fornecedores</a>
+        <a href="ListaProdutos.html">Produtos</a>
+        <a href="SimularProjeto.html">Simulação</a>
+        <a href="ListaContatos.html">Contatos</a>
+        <a href="#">Clientes</a>
+        <a href="#">Sair</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Lista de Fornecedores</h1>
+    <a href="#" class="btn-novo">Novo Fornecedor</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Documento</th>
+                <th>Ativo?</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Matheus Oliveira</td>
+                <td>01966188609</td>
+                <td><input type="checkbox" checked disabled></td>
+                <td>
+                    <button class="btn btn-detalhes">Detalhes</button>
+                    <button class="btn btn-editar">Editar</button>
+                    <button class="btn btn-excluir">Excluir</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
